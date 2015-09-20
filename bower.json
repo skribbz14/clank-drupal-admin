@@ -1,0 +1,30 @@
+{
+  "name": "clank-drupal-admin",
+  "version": "0.1.0",
+  "authors": [
+    "Kyle Lamble"
+  ],
+  "description": "A collection of sass files that style the Drupal Admin.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Front-end",
+    "Developement",
+    "sass",
+    "scss",
+    "javascript",
+    "js",
+    "Drupal",
+    "Drupal",
+    "Theme"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

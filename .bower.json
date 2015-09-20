@@ -1,0 +1,39 @@
+{
+  "name": "clank-drupal-admin",
+  "authors": [
+    "Kyle Lamble"
+  ],
+  "description": "A collection of sass files that style the Drupal Admin.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Front-end",
+    "Developement",
+    "sass",
+    "scss",
+    "javascript",
+    "js",
+    "Drupal",
+    "Drupal",
+    "Theme"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/skribbz14/clank-drupal-admin",
+  "_release": "91d39890d3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "91d39890d32a053ef66d8774d75c408fac5337e8"
+  },
+  "_source": "git://github.com/skribbz14/clank-drupal-admin.git",
+  "_target": "*",
+  "_originalSource": "clank-drupal-admin"
+}

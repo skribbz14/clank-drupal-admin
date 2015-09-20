@@ -1,0 +1,92 @@
+/*
+//
+/// Admin Menu */
+
+#admin-menu {
+	@include box-shadow(none);
+	background-image:none;
+	background-color:#45454A;
+	
+	a{
+		@include disable_user_select();
+		text-transform:lowercase;
+		@include adjust-font(12, 15);
+	}
+	
+	.nolink{
+		cursor:default;
+		@include adjust-font(12,15);		
+	}
+	
+	.dropdown{
+		float:left;
+		
+		&:last-child{
+			float:right;
+		}
+		
+		li{
+			@include transition(background-color 0.3s ease-out);
+			
+			&:hover{
+				@include transition(background-color 0.15s ease-out);
+				background-color:#63636b;
+			}
+		}
+		
+		.admin-menu-toolbar-category{
+			
+			&:last-of-type{
+				a{
+					border-right:none;
+				}
+			}
+		
+			> a{
+				margin:0;
+				padding:5px 8px;
+				@include fallback(border-right, $admin_border_color, $admin_border_color_fallback);	
+				@include border-radius(0);
+				
+				&.active-trail{
+					background-image:none;
+				}						
+				
+				&:hover{
+					background-color:rgb(139, 139, 139);
+				}
+			}
+		}
+			
+		.admin-menu-icon{
+			a{
+				border:none !important;
+			}
+		}
+
+		.admin-menu-action a{
+			padding:5px 8px;
+			margin:0;
+		}		
+	}
+	
+	.dropdown .dropdown .dropdown{
+		margin-top:-22px;
+		
+		li:first-child a{
+			border-top:none;
+		}
+	}	
+	
+	li.admin-menu-account > a{
+		background:transparent;	
+	}	
+	
+	#admin-menu-wrapper{
+		padding-top:0;
+	}
+}
+
+html body.admin-menu{
+	margin-top:25px !important;
+}

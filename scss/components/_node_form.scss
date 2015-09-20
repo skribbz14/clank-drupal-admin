@@ -1,0 +1,515 @@
+/*
+//
+/// Config */
+
+%node_form--form_item_margin{
+	@include rem(margin, 20, 0);
+	
+	&:last-child{
+  	margin-bottom:0;
+	}
+}
+
+%node_form--field_label{
+	@extend %headline;
+	@include adjust-font(20,25,300);
+	float:left;
+	width:100%;
+	clear:both;
+}
+
+%node_form--field_container_styles{
+	width:100%;
+	display:table;
+	@include rem(padding, 15, 15, 0);
+	border-top:1px solid silver;
+	
+	&:first-child{
+  	border-top:0;
+	}
+	
+	&:last-child{
+  	padding-bottom:0;
+	}
+}
+
+%node_form--hexidecimal_field{
+  
+  .form-text{
+    @include rem(width, 100);
+  }
+}
+
+
+
+/*
+//
+/// Node Form */
+
+.node-form{
+	@extend %container;
+	@include rem(margin-top, $layout--header_height + 25);
+	
+	.grippie{
+  	display:none;
+	}
+	
+	.form-wrapper{  	
+		clear:both;
+		display:table;						
+	}
+	
+	.description{
+		@extend %body_copy;
+		@include rem(padding-top, 10);
+		@include rem(max-width, $layout--text_max_width);
+		clear:both;
+	}
+	
+	label{
+		@extend %node_form--field_label;
+	}		
+			
+	
+	
+	/*
+	//
+	/// Fieldsets */
+	
+	fieldset{
+		@include rem(margin, 40, 2);
+		border:1px solid silver !important;
+		padding:0;
+		height:auto;
+		background-color:#F0F0F0;
+		@include transition(background-color 0.3s ease-out);
+		
+		&.collapsed{			
+			background-color:white;
+			height:auto !important;
+						
+			&:hover{
+				@include transition(background-color 0.15s ease-out);
+				background-color:#F0F0F0;
+			}
+		}
+	}
+	
+	legend{
+		@include rem(padding, 3, 15);
+		float:left;
+		width:100%;
+	}
+	
+	.fieldset-legend{
+		@include fontStyle($primary_font, 32, 35, 300);
+	}
+	
+	.fieldset-wrapper{
+		padding:0px 20px 25px !important;
+	}
+	
+	.fieldset-title{
+		float:left;
+		width:100%;
+	}
+	
+	.vertical-tabs fieldset{
+		background-color:transparent;
+		border:none;
+	}
+	
+	
+	
+	/*
+	//
+	/// Checkboxes & Radios */
+	
+	.form-checkbox,
+	.form-radio {
+		@include rem(height, 27);
+		float:left;
+		
+		& + .option{
+			@extend %body_copy;
+			@include rem(margin-left, 5);
+			width:auto;
+			clear:none;
+		}						
+	}
+	
+	.form-radios{
+		@include rem(padding-top, 10);
+		display:table;
+		width:100%;
+		
+		.form-item{
+		  width: auto;
+		  display: table;
+		  float: left;
+		  clear:none;
+		  @include rem(margin-right, 20);
+		}
+	}
+	
+	.form-type-checkbox{
+  	clear:both;
+	}
+	
+	
+	
+	/*
+	//
+	/// Inline Entity Form */
+	
+	.field-type-entityreference {
+		width:100%;
+
+		.redirect-list{
+			display:none;		
+		}
+
+		
+		.fieldset-wrapper > .container-inline:last-child input[type="submit"]{
+			@include rem(margin-top, 25);
+		}
+	}
+		
+	.field-group-fieldset .field-widget-inline-entity-form{		
+		@include rem(margin-top, -80);			
+	}
+	
+	.ief-form{
+		border-bottom:0;	
+		
+		input[type="submit"]{
+			@include rem(margin, 0, 10);
+		}
+	}
+	
+	.ief-entity-operations input[type="submt"]{
+		@include rem(margin, 0, 10);
+	}
+	
+	
+	
+	/*
+	//
+	/// Image Field */
+	
+	.field-type-image{
+    @extend %node_form--field_container_styles;
+		@extend %node_form--form_item_margin;
+		
+		label{
+			@extend %node_form--field_label;
+		}
+		
+		.form-type-textfield{
+  		border:none;
+  		clear:both;
+  		float:left;
+  		padding:0;
+		}
+		
+		.image-preview{
+  		margin-top:20px;
+		}
+	}
+	
+	
+	
+	/*
+  //
+  /// Link field */
+  
+  .field-type-link-field{
+    @extend %node_form--field_container_styles; 
+    
+		label{
+			@extend %node_form--field_label;
+		}		
+		
+		.link-field-column{
+      width:auto;
+      clear:both;
+        		
+  		label{
+    		font-family:$arial;
+    		@include rem(font-size, 14);
+  		}
+		}    
+		
+		.form-item{
+  		padding:0;
+		}
+  }
+  
+	
+	
+	/*
+	//
+	/// Submit Form Buttons */
+	
+	.form-actions{
+		display:table;
+		@include rem(padding, 40, 0);
+		width:1005;
+		
+		.form-submit{
+  		@include rem(margin-right, $layout--unit_half);
+  		
+  		&:last-child{
+    		margin-right:0;
+  		}
+		}
+	}
+	
+	
+	/*
+	//
+	/// WYSIWYG */
+	
+	.text-format-wrapper .filter-wrapper{
+		display:none !important;
+	}
+	
+	.field-type-text-with-summary{
+		@extend %node_form--form_item_margin;
+		@extend %node_form--field_container_styles;
+		
+		label{
+			@extend %node_form--field_label;
+			float:none;
+		}
+		
+		.description{
+  		border:none;
+		}
+		
+		.field-edit-link{
+  		display:none;
+		}
+	}
+	
+	
+	
+	/*
+  //
+  /// Text fields */
+  
+  .field-type-text{
+    @extend %node_form--field_container_styles;
+		@extend %node_form--form_item_margin;  
+		
+		.form-item{
+  		margin:0;
+  		padding:0;
+		}  		
+  }
+	
+	
+	
+	/*
+	//
+	/// Vertical Tabs */
+	
+	.vertical-tabs{
+		
+		.form-wrapper{
+			clear:none;
+		}		
+	}
+	
+	.vertical-tabs-panes{
+  	@include rem(padding-top, 45);
+	}
+	
+	
+	
+	/*
+	//
+	/// Date field */
+	
+	.field-type-datetime{
+		width:100%;
+		@extend %node_form--form_item_margin;
+		@extend %node_form--field_container_styles;
+		
+		.date-processed{
+			border:none !important;
+			margin-top:0;
+			margin-bottom:0;
+			
+			.fieldset-legend{
+				@extend %node_form--field_label;
+				padding-left:0 !important;
+			}
+		}
+		
+		.fieldset-wrapper,
+		legend{
+			padding:0 !important;
+			
+		}
+		
+		.date-padding{
+			padding-left:0;
+			padding-bottom:0;
+		}
+		
+		.form-item{
+  		margin-bottom:0;
+		}
+	}
+	
+	
+	
+	/*
+	//
+	/// Text List */
+	
+	.field-type-list-text{
+		@extend %node_form--form_item_margin;
+    @extend %node_form--field_container_styles;
+		
+		label{
+			@extend %node_form--field_label;
+		}
+	}
+	
+	
+	
+	/*
+	//
+	/// Text Fields */
+	
+	.form-type-textfield{
+		@extend %node_form--form_item_margin;
+		@extend %node_form--field_container_styles;
+		
+		label{
+			@extend %node_form--field_label;
+		}		
+	}
+  
+  
+  
+  /*
+  //
+  /// Tabledrag handles */
+  
+  .draggable a.tabledrag-handle{
+    height:1.4em;
+  }
+
+  
+  
+  /*
+  //
+  /// Textareas */
+  
+  .form-textarea{
+    min-height:0;
+  }
+  
+  .field-type-text-long{
+    @extend %node_form--form_item_margin;
+    @extend %node_form--field_container_styles;
+  }
+  
+  
+  
+  /*
+  //
+  /// Taxonomy reference field */
+  
+  .field-type-taxonomy-term-reference{
+    @extend %node_form--form_item_margin;
+    @extend %node_form--field_container_styles;
+    
+    .form-type-select{
+      margin-bottom:0;
+    }
+  }
+  
+  
+  
+  /*
+  //
+  /// Product reference field */
+  
+  .field-type-commerce-product-reference{
+    @extend %node_form--form_item_margin;
+    @extend %node_form--field_container_styles;
+  }
+  
+  
+  
+  /*
+  //
+  /// Field Collections */
+  
+  .field-type-field-collection{
+    width:100%;
+    
+    legend{
+      display:none;
+    }
+    
+    fieldset{
+      border:none !important;
+      margin-bottom:0;
+    }        
+    
+    .fieldset-wrapper{
+      padding-bottom:0 !important;
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+    
+    .ds-1col{
+      margin:0;
+    }
+  }
+  
+  .field-group-fieldset > .fieldset-wrapper{
+    padding-left:0 !important;
+    padding-right:0 !important;
+    clear:both;
+  }
+  
+  
+  
+  /*
+  //
+  /// Boolean field */
+  
+  .field-type-list-boolean{
+    @extend %node_form--field_container_styles;
+  }
+  
+} // end node form
+
+
+
+/*
+//
+/// LGV3 fields */
+
+.node-form{
+  
+  .field-name-field-gradient-end-color,
+  .field-name-field-color,
+  .field-name-field-gradient-start-color{
+    @extend %node_form--hexidecimal_field;
+  }
+  
+  .field-name-field-embed-code{
+    
+    .form-textarea{
+      @include box(700, 100);
+      min-width:0;
+    }
+  }
+}
