@@ -17,7 +17,7 @@ $node_form--content_max_width:900; /// rem/px
 $node_form--content_mobile_max_width:90; /// percentage
 
 /// A container is applied to content wrappers that needs to be centered on the screen ex. l-main
-%container{
+%node_form--container{
   @include rem(max-width, $node_form--content_max_width);
   @include rem(margin, $node_form--unit, auto);  
   width:100%;
