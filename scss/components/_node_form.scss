@@ -530,6 +530,10 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
       @extend %node_form--border;
       @extend %disable_outline;
       resize:none;
+      
+      &::inner-editor{
+        @include rem(padding, $node_form--unit);
+      }
     }
   }
   
