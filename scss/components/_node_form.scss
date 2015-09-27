@@ -15,6 +15,8 @@ $node_form--unit_double:$node_form--unit * 2;
 	}
 }
 
+
+/// FIELDS
 %node_form--field_label{	
 	@include adjust-font(20,25,300);
 	float:left;
@@ -44,10 +46,26 @@ $node_form--unit_double:$node_form--unit * 2;
   }
 }
 
+
+/// BOX SHADOWS
+$node_form--box_shadow_values:3px 3px 5px -3px;
+
 %node_form--box_shadow{
-  @include box-shadow(3px 3px 5px -3px rgba(0,0,0,0.3));
+  @include box-shadow($node_form--box_shadow_values rgba(0,0,0,0.3));
 }
 
+%node_form--box_shadow_focus_effect{
+  @include box-shadow($node_form--box_shadow_values rgba(0,0,0,0.0));
+  @include transition(box-shadow 0.3s ease-out);
+  
+  &:focus{
+    @include transition(box-shadow 0.2s ease);
+    @extend %node_form--box_shadow;  
+  }  
+}
+
+
+/// BORDERS
 %node_form--border{
   border:1px solid silver;
 }
@@ -416,8 +434,8 @@ $node_form--unit_double:$node_form--unit * 2;
 	.form-text{
   	@extend %disable_outline;
   	@extend %node_form--border_radius;
-  	@extend %node_form--border;
-  	@extend %node_form--box_shadow;
+  	@extend %node_form--border;  
+  	@extend %node_form--box_shadow_focus_effect;
   	@include rem(padding, $node_form--unit_half, 0);
   	@include rem(text-indent, $node_form--unit_half);
 	}
