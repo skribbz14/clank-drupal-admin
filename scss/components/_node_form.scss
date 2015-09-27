@@ -2,6 +2,11 @@
 //
 /// Config */
 
+$node_form--unit:20;
+$node_form--unit_half:$node_form--unit * 0.5;
+$node_form--unit_double:$node_form--unit * 2;
+
+
 %node_form--form_item_margin{
 	@include rem(margin, 20, 0);
 	
@@ -39,6 +44,18 @@
   }
 }
 
+%node_form--box_shadow{
+  @include box-shadow(3px 3px 5px -3px rgba(0,0,0,0.3));
+}
+
+%node_form--border{
+  border:1px solid silver;
+}
+
+%node_form--border_radius{
+  @include border-radius(5px);
+}
+
 
 
 /*
@@ -48,9 +65,10 @@
 .node-form{
 	//@extend %container;
 	//@include rem(margin-top, $layout--header_height + 25);
-	border:1px solid silver;
-	@include box-shadow(3px 3px 5px -3px rgba(0,0,0,0.3));
-	@include border-radius(5px);
+	@extend %node_form--box_shadow;
+	@extend %node_form--border;
+	@extend %node_form--border_radius;
+	
 	
 	.grippie{
   	display:none;
@@ -397,8 +415,11 @@
 	
 	.form-text{
   	@extend %disable_outline;
-  	@include border-radius(5px);
-  	
+  	@extend %node_form--border_radius;
+  	@extend %node_form--border;
+  	@extend %node_form--box_shadow;
+  	@include rem(padding, $node_form--unit_half, 0);
+  	@include rem(text-indent, $node_form--unit_half);
 	}
   
   
