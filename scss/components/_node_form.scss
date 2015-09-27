@@ -32,8 +32,8 @@ $node_form--content_mobile_max_width:90; /// percentage
   }  
   
   /// This crazy breakpoint transitions from a static max-width to a percentage without any jump
-  @include breakat((round($layout--content_max_width * 100) / $layout--content_mobile_max_width)){
-    max-width: #{$layout--content_mobile_max_width * 1%}; /// We have to use interpolation in order to call the mobile percentage width
+  @include breakat((round($node_form--content_max_width * 100) / $node_form--content_mobile_max_width)){
+    max-width: #{$node_form--content_mobile_max_width * 1%}; /// We have to use interpolation in order to call the mobile percentage width
   }
 }
 
