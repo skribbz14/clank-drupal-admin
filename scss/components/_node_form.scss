@@ -89,7 +89,7 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 
 
 /// BUTTONS 
-$node_form--button_active_percentage:40%;
+$node_form--button_active_percentage:80%;
 
 @mixin node_form--button_color($color){
   background-color:$color;
