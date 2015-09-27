@@ -2,7 +2,7 @@
 //
 /// Vertical Tabs */
 
-div.vertical-tabs{
+.vertical-tabs{
 	@extend %node_form--border;
 	border-right:none;
 	@include rem(margin-top, 45);
@@ -74,7 +74,7 @@ div.vertical-tabs{
 	}
 	
 	.vertical-tabs-pane{
-		@include rem(padding, 0, 35);
+		@include rem(padding, 0, $node_form--unit);
 		border:none !important;
 	}
 
@@ -91,5 +91,4 @@ div.vertical-tabs{
 			@include rem(font-size, 16);
 		}
 	}
-	
 }

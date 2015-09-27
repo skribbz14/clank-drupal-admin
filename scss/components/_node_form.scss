@@ -394,6 +394,10 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 	.vertical-tabs-panes{
   	@include rem(padding-top, $node_form--unit);
   	
+  	fieldset{
+    	padding:0 !important;
+  	}
+  	
   	.form-item{
     	padding:0;
     	border:0;
