@@ -522,6 +522,12 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
   .field-type-text-long{
     @extend %node_form--form_item_margin;
     @extend %node_form--field_container_styles;
+    
+    .text-full{
+      @extend %node_form--box_shadow_focus_effect;
+      @extend %node_form--border_radius;
+      @extend %node_form--textbox_width;
+    }
   }
   
   
