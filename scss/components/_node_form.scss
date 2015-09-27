@@ -180,10 +180,9 @@ $node_form--button_active_percentage:20%;
 		display:table;						
 	}
 	
-	.description{
-		//@extend %body_copy;
+	.description{  	
+		@include adjust-font(13, 16);
 		@include rem(padding-top, 10);
-		//@include rem(max-width, $layout--text_max_width);
 		clear:both;
 	}
 	
