@@ -10,8 +10,7 @@
 	}
 }
 
-%node_form--field_label{
-	@extend %headline;
+%node_form--field_label{	
 	@include adjust-font(20,25,300);
 	float:left;
 	width:100%;
@@ -47,8 +46,8 @@
 /// Node Form */
 
 .node-form{
-	@extend %container;
-	@include rem(margin-top, $layout--header_height + 25);
+	//@extend %container;
+	//@include rem(margin-top, $layout--header_height + 25);
 	
 	.grippie{
   	display:none;
@@ -60,9 +59,9 @@
 	}
 	
 	.description{
-		@extend %body_copy;
+		//@extend %body_copy;
 		@include rem(padding-top, 10);
-		@include rem(max-width, $layout--text_max_width);
+		//@include rem(max-width, $layout--text_max_width);
 		clear:both;
 	}
 	
@@ -102,7 +101,7 @@
 	}
 	
 	.fieldset-legend{
-		@include fontStyle($primary_font, 32, 35, 300);
+		//@include fontStyle($primary_font, 32, 35, 300);
 	}
 	
 	.fieldset-wrapper{
@@ -131,7 +130,7 @@
 		float:left;
 		
 		& + .option{
-			@extend %body_copy;
+			//@extend %body_copy;
 			@include rem(margin-left, 5);
 			width:auto;
 			clear:none;
@@ -235,7 +234,7 @@
       clear:both;
         		
   		label{
-    		font-family:$arial;
+    		font-family:'arial';
     		@include rem(font-size, 14);
   		}
 		}    
@@ -257,7 +256,7 @@
 		width:1005;
 		
 		.form-submit{
-  		@include rem(margin-right, $layout--unit_half);
+  		//@include rem(margin-right, $layout--unit_half);
   		
   		&:last-child{
     		margin-right:0;
