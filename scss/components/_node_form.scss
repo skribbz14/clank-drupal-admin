@@ -394,6 +394,12 @@
 			@extend %node_form--field_label;
 		}		
 	}
+	
+	.form-text{
+  	@extend %disable_outline;
+  	@include border-radius(5px);
+  	
+	}
   
   
   
