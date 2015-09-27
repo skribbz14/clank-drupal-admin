@@ -108,6 +108,7 @@ $node_form--button_active_percentage:40%;
 }
 
 %node_form--button{
+  @extend %disable_outline;
   @include appearance(none);
   @include rem(padding, $node_form--unit_half, 0);
   @include rem(width, 230);
