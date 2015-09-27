@@ -527,6 +527,8 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
       @extend %node_form--box_shadow_focus_effect;
       @extend %node_form--border_radius;
       @extend %node_form--textbox_width;
+      @extend %node_form--border;
+      @extend %disable_outline;
     }
   }
   
