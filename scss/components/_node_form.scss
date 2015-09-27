@@ -43,11 +43,12 @@
 
 /*
 //
-/// Node Form */
+/// Static styling */
 
 .node-form{
 	//@extend %container;
 	//@include rem(margin-top, $layout--header_height + 25);
+	border:1px solid silver;
 	
 	.grippie{
   	display:none;
