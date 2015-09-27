@@ -100,7 +100,7 @@ $node_form--button_active_percentage:20%;
     background-color:lighten($color, $node_form--button_active_percentage);
   }
   
-  .no-touch &:hover{
+  .no-touchevents &:hover{
     @include transition(background-color 0.15s ease);
     background-color:lighten($color, 10%);
     
