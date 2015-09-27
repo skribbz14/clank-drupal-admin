@@ -405,12 +405,22 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 		}
 		
 		.date-padding{
-			padding-left:0;
-			padding-bottom:0;
+			padding:0;
 		}
 		
 		.form-item{
+  		@include rem(margin-right, $node_form--unit);
   		margin-bottom:0;
+  		float:left;
+  		
+  		&:last-child{
+    		margin-right:0;
+  		}
+  		
+  		label{
+    		@include adjust-font(14, 18);
+    		margin-bottom:0;
+  		}
 		}
 	}
 	
