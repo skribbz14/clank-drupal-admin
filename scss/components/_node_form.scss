@@ -496,7 +496,12 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
   
   .field-type-file{
 		@extend %node_form--form_item_margin;
-		@extend %node_form--field_container_styles;    
+		@extend %node_form--field_container_styles;  
+		
+		.form-type-textfield{
+  		padding:0;
+  		border:none;
+		}  
   }
   
   
