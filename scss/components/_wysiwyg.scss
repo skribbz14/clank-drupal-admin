@@ -151,7 +151,7 @@
 		
 		.cke_focus &{
       @include transition(box-shadow 0.2s ease);
-      @extend %node_form--box_shadow;    		
+      @include box-shadow($node_form--box_shadow_values rgba(0,0,0,0.3));
 		}
 	}
 }
