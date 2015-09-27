@@ -393,6 +393,11 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 	
 	.vertical-tabs-panes{
   	@include rem(padding-top, $node_form--unit);
+  	
+  	.form-item{
+    	padding:0;
+    	border:0;
+  	}
 	}
 	
 	
@@ -522,31 +527,18 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
   
   .form-textarea{
     min-height:0;
-  }
-  
-  .field-type-text-long{
-    @extend %node_form--form_item_margin;
-    @extend %node_form--field_container_styles;
-    
-    /*.text-full{
-      @extend %node_form--box_shadow_focus_effect;
-      @extend %node_form--border_radius;
-      @extend %node_form--textbox_width;
-      @extend %node_form--border;
-      @extend %disable_outline;
-      @include rem(padding, $node_form--unit);
-      resize:none;
-    }*/
-  }
-  
-  .form-textarea{
     @extend %node_form--box_shadow_focus_effect;
     @extend %node_form--border_radius;
     @extend %node_form--textbox_width;
     @extend %node_form--border;
     @extend %disable_outline;
     @include rem(padding, $node_form--unit);
-    resize:none;    
+    resize:none;      
+  }
+  
+  .field-type-text-long{
+    @extend %node_form--form_item_margin;
+    @extend %node_form--field_container_styles;
   }
   
   
