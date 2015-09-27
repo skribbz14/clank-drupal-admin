@@ -148,10 +148,10 @@
 			display:table;
 			width:100%;
 		}
-		
-		.cke_focus &{
-      @include transition(box-shadow 0.2s ease);
-      @include box-shadow($node_form--box_shadow_values rgba(0,0,0,0.3));
-		}
 	}
+}
+
+.cke_skin_kama .cke_browser_webkit.cke_focus .cke_editor{
+  @include transition(box-shadow 0.2s ease);
+  @include box-shadow($node_form--box_shadow_values rgba(0,0,0,0.3));  
 }
