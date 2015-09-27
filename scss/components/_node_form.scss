@@ -76,6 +76,13 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 }
 
 
+/// TEXTBOXES
+%node_form--textbox_width{
+  @include rem(max-width, 685);
+  width:100%;
+}
+
+
 
 /*
 //
@@ -323,6 +330,7 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 		label{
 			@extend %node_form--field_label;
 			float:none;
+			display:table;
 		}
 		
 		.description{
@@ -440,6 +448,7 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
   	@extend %node_form--border_radius;
   	@extend %node_form--border;  
   	@extend %node_form--box_shadow_focus_effect;
+  	@extend %node_form--textbox_width;
   	@include rem(padding, $node_form--unit_half, 0);
   	@include rem(text-indent, $node_form--unit_half);
 	}
