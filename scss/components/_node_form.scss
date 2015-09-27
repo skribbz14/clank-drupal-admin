@@ -83,6 +83,14 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 }
 
 
+/// BUTTONS 
+%node_form--button{
+  @include appearance(none);
+  @include rem(padding, $node_form--unit_half, $node_form--unit);
+  border:none;
+}
+
+
 
 /*
 //
@@ -115,10 +123,6 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 	label{
 		@extend %node_form--field_label;
 	}		
-  
-  .form-item{
-    
-  }
 	
 	
 	/*
@@ -301,18 +305,20 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 	/// Submit Form Buttons */
 	
 	.form-actions{
+		@include rem(padding, $node_form--unit_double, 0);
 		display:table;
-		@include rem(padding, 40, 0);
-		width:1005;
+		margin:auto;		
 		
 		.form-submit{
-  		//@include rem(margin-right, $layout--unit_half);
+  		@extend %node_form--button;
+  		@include rem(margin-right, $node_form--unit);
   		
   		&:last-child{
     		margin-right:0;
   		}
 		}
 	}
+	
 	
 	
 	/*
@@ -401,6 +407,10 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
   	.form-item{
     	padding:0;
     	border:0;
+    	
+    	&:first-child{
+      	margin-top:0;
+    	}
   	}
   	
   	.form-disabled .form-text{
