@@ -468,6 +468,17 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
   
   /*
   //
+  /// File field */
+  
+  .field-type-file{
+		@extend %node_form--form_item_margin;
+		@extend %node_form--field_container_styles;    
+  }
+  
+  
+  
+  /*
+  //
   /// Tabledrag handles */
   
   .draggable a.tabledrag-handle{
