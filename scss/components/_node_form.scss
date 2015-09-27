@@ -164,7 +164,7 @@ $node_form--button_active_percentage:20%;
 
 .node-form{
 	@include rem(margin-top, $node_form--unit_double);
-	@extend $node_form--container;
+	@extend %node_form--container;
 	@extend %node_form--box_shadow;
 	@extend %node_form--border;
 	@extend %node_form--border_radius;
