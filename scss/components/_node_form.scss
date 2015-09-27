@@ -160,6 +160,10 @@ $node_form--button_active_percentage:40%;
 		@extend %node_form--field_label;
 	}		
 	
+	> div > div:first-child{
+  	margin-top:0;
+	}
+	
 	
 	/*
 	//
