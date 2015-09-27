@@ -351,6 +351,14 @@ $node_form--button_active_percentage:40%;
   		&:last-child{
     		margin-right:0;
   		}
+  		
+  		&#edit-submit{
+    		@extend %node_form--button.green;
+  		}
+  		
+  		&#edit-delete{
+    		@extend %node_form--button.red;
+  		}
 		}
 	}
 	
