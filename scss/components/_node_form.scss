@@ -2,10 +2,10 @@
 //
 /// Config */
 
+/// LAYOUT
 $node_form--unit:20;
 $node_form--unit_half:$node_form--unit * 0.5;
 $node_form--unit_double:$node_form--unit * 2;
-
 
 %node_form--form_item_margin{
 	@include rem(margin, 20, 0);
@@ -19,6 +19,7 @@ $node_form--unit_double:$node_form--unit * 2;
 /// FIELDS
 %node_form--field_label{	
 	@include adjust-font(20,25,300);
+	@include rem(margin-bottom, 10);
 	float:left;
 	width:100%;
 	clear:both;
@@ -107,7 +108,10 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 	label{
 		@extend %node_form--field_label;
 	}		
-			
+  
+  .form-item{
+    
+  }
 	
 	
 	/*
@@ -537,26 +541,3 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
   }
   
 } // end node form
-
-
-
-/*
-//
-/// LGV3 fields */
-
-.node-form{
-  
-  .field-name-field-gradient-end-color,
-  .field-name-field-color,
-  .field-name-field-gradient-start-color{
-    @extend %node_form--hexidecimal_field;
-  }
-  
-  .field-name-field-embed-code{
-    
-    .form-textarea{
-      @include box(700, 100);
-      min-width:0;
-    }
-  }
-}
