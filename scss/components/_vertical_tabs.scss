@@ -3,20 +3,20 @@
 /// Vertical Tabs */
 
 div.vertical-tabs{
-	@extend %admin_border_style;
+	@extend %node_form--border;
+	border-right:none;
 	@include rem(margin-top, 45);
 	background-color: white;
 
 	
 	ul.vertical-tabs-list{
-		border-top: 1px solid black;
-		@include fallback(border-top, $admin_border_color, $admin_border_color);
-		@include fallback(border-bottom, $admin_border_color, $admin_border_color); 
+  	@include rem(width, 212);
+  	@include rem(margin-left, -212);
 
 		.vertical-tab-button{
-			@extend %admin_border_style;
+			@extend %node_form--border;
 			border-top:none;
-			@include disable_user_select();
+			@extend %disable_user_select;
 			
 			&.selected{
 				border-right:none;
