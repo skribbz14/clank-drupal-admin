@@ -12,6 +12,33 @@ $node_form--unit:20;
 $node_form--unit_half:$node_form--unit * 0.5;
 $node_form--unit_double:$node_form--unit * 2;
 
+/// Keeps the content from stretching across the entire screen
+$node_form--content_max_width:900; /// rem/px
+$node_form--content_mobile_max_width:90; /// percentage
+
+/// A container is applied to content wrappers that needs to be centered on the screen ex. l-main
+%container{
+  @include rem(max-width, $node_form--content_max_width);
+  @include rem(margin, $node_form--unit, auto);  
+  width:100%;
+  display:table;
+  clear:both;
+  
+  /// Androids don't respect max-width when set to display:table;
+  .androidV4-3 &, 
+  .androidV4-2 &,
+  .androidV4-1 &{
+    display:block;
+  }  
+  
+  /// This crazy breakpoint transitions from a static max-width to a percentage without any jump
+  @include breakat((round($layout--content_max_width * 100) / $layout--content_mobile_max_width)){
+    max-width: #{$layout--content_mobile_max_width * 1%}; /// We have to use interpolation in order to call the mobile percentage width
+  }
+}
+
+
+/// FORM ITEMS
 %node_form--form_item_margin{
 	@include rem(margin, 20, 0);
 	
@@ -136,8 +163,8 @@ $node_form--button_active_percentage:20%;
 /// Static styling */
 
 .node-form{
-	//@extend %container;
-	//@include rem(margin-top, $layout--header_height + 25);
+	@include rem(margin-top, $node_form--unit_double);
+	@extend $node_form--container;
 	@extend %node_form--box_shadow;
 	@extend %node_form--border;
 	@extend %node_form--border_radius;
