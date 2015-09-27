@@ -49,6 +49,8 @@
 	//@extend %container;
 	//@include rem(margin-top, $layout--header_height + 25);
 	border:1px solid silver;
+	@include box-shadow(3px 3px 5px -3px rgba(0,0,0,0.3));
+	@include border-radius(5px);
 	
 	.grippie{
   	display:none;
