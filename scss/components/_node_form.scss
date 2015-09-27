@@ -367,6 +367,15 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
   .field-type-number-float{
     @extend %node_form--form_item_margin;
 		@extend %node_form--field_container_styles;    
+		
+		.form-item{
+  		margin-top:0;
+  		padding:0;
+		}
+		
+		.form-text{
+  		@include rem(max-width, 100);
+		}
   }
 	
 	
