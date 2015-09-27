@@ -111,6 +111,7 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 /// TEXTBOXES
 %node_form--textbox_width{
   @include rem(max-width, 685);
+  @include adjust-font(16, 20);
   width:100%;
 }
 
