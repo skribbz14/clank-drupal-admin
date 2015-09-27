@@ -92,14 +92,17 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 $node_form--button_active_percentage:20%;
 
 @mixin node_form--button_color($color){
+  @include transition(background-color 0.3s ease-out);
   background-color:$color;
   
   &:active{
+    @include transition(background-color 0s);
     background-color:lighten($color, $node_form--button_active_percentage);
   }
   
   .no-touch &:hover{
-    background-color:lighten($color, 50%);
+    @include transition(background-color 0.15s ease);
+    background-color:lighten($color, 10%);
     
     &:active{
       background-color:lighten($color, $node_form--button_active_percentage);  
