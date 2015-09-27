@@ -2,11 +2,11 @@
 //
 /// Vertical Tabs */
 
-.vertical-tabs{
+div.vertical-tabs{
 	@extend %node_form--border;
 	border-right:none;
-	@include rem(margin-top, 45);
 	background-color: white;
+	margin:1em 0 1em 21em;
 
 	
 	ul.vertical-tabs-list{
