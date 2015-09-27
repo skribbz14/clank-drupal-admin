@@ -2,6 +2,11 @@
 //
 /// Config */
 
+/// COLORS
+$node_form--green:#53C353;
+$node_form--red:#E25858;
+
+
 /// LAYOUT
 $node_form--unit:20;
 $node_form--unit_half:$node_form--unit * 0.5;
@@ -84,10 +89,40 @@ $node_form--box_shadow_values:3px 3px 5px -3px;
 
 
 /// BUTTONS 
+$node_form--button_active_percentage:40%;
+
+@mixin node_form--button_color($color){
+  background-color:$color;
+  
+  &:active{
+    background-color:lighten($color, $node_form--button_active_percentage);
+  }
+  
+  .no-touch &:hover{
+    background-color:lighten($color, 50%);
+    
+    &:active{
+      background-color:lighten($color, $node_form--button_active_percentage);  
+    }
+  }
+}
+
 %node_form--button{
   @include appearance(none);
-  @include rem(padding, $node_form--unit_half, $node_form--unit);
+  @include rem(padding, $node_form--unit_half, 0);
+  @include rem(width, 230);
+  @include adjust-font(18, 18);
+  max-width:40%;
+  color:white;
   border:none;
+  
+  &.green{
+    @include node_form--button_color($node_form--green);
+  }
+  
+  &.red{
+    @include node_form--button_color($node_form--red);        
+  }
 }
 
 
