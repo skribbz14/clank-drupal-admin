@@ -375,9 +375,10 @@ $node_form--button_active_percentage:20%;
 	/// Submit Form Buttons */
 	
 	.form-actions{
-		@include rem(padding, $node_form--unit_double, 0);
+		@include rem(padding, $node_form--unit_double);
 		display:table;
 		margin:auto;		
+		float:left;
 		
 		.form-submit{
   		@extend %node_form--button;
