@@ -676,6 +676,8 @@ $node_form--button_active_percentage:20%;
   /// Field Collections */
   
   .field-type-field-collection{
+    @extend %node_form--form_item_margin;
+    @extend %node_form--field_container_styles;    
     width:100%;
     
     legend{
