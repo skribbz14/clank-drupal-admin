@@ -680,9 +680,17 @@ $node_form--button_active_percentage:20%;
     @extend %node_form--field_container_styles;    
     width:100%;
     
+    .form-wrapper{
+      @extend %node_form--border;
+      @extend %node_form--border_radius;
+      @include rem(padding-bottom, $node_form--unit);
+    }
+    
+    /// Top level form-wrapper
     > div > .form-wrapper{
       margin-top:0;
-    }
+      background-color:white;
+    }        
     
     legend{
       @extend %node_form--field_label;
