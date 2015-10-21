@@ -679,7 +679,7 @@ $node_form--button_active_percentage:20%;
     width:100%;
     
     legend{
-      //display:none;
+      @extend %node_form--field_label;
     }
     
     fieldset{
