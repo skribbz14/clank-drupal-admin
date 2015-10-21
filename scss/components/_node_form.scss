@@ -680,8 +680,13 @@ $node_form--button_active_percentage:20%;
     @extend %node_form--field_container_styles;    
     width:100%;
     
+    > div > .form-wrapper{
+      margin-top:0;
+    }
+    
     legend{
       @extend %node_form--field_label;
+      padding:0;
     }
     
     fieldset{
@@ -693,10 +698,17 @@ $node_form--button_active_percentage:20%;
       padding-bottom:0 !important;
       padding-left:0 !important;
       padding-right:0 !important;
+      display:table;
+      width:100%;
     }
     
     .ds-1col{
       margin:0;
+    }
+    
+    .form-item > label{
+      @include adjust-font(17, 19, 500);
+      @include rem(margin-bottom, 5);
     }
   }
   
